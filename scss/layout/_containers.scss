@@ -1,0 +1,47 @@
+////////////////////////////////////////////////
+//Containers for the header logo and buttons
+////////////////////////////////////////////////
+.container {
+    display: flex;
+    margin: 0 15px;  
+    img:hover {
+        cursor: pointer;
+    }
+}
+.selection {
+   display: flex;
+   justify-content: right;
+   margin-top: auto;
+   margin-bottom: auto;
+   margin-left: auto;
+   img:hover {
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    }
+    .support-btn-li {
+        :hover {
+            background-color: #2a6ec6;
+            border-color: #2665b5;
+            cursor: pointer;
+          }
+    }
+    .contact-btn-li {
+        :hover {
+            background-color: #84858f;
+            border-color: #797a85; 
+            cursor: pointer;
+        }
+    }
+    .menu-btn-li {
+        :hover {
+            background-color: #22242e;
+            border-color: #191a22;
+            cursor: pointer;
+          }
+          .burger:hover {
+            background-color: white;
+        }
+    }
+}
+
