@@ -11,7 +11,8 @@
 //Properties for all the buttons inside the header and navigation bar
 .support-btn,
 .contact-btn,
-.menu-btn {
+.menu-btn,
+.cookie-btn {
   vertical-align: center;
   border: 1px solid transparent;
   padding: 5px 15px;
@@ -76,40 +77,63 @@ button:hover {
       content: '';
       background-color: white;
 
-      &::before {
-        position: absolute;
-        top: 11px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        display: block;
-        width: 33px;
-        height: 3px;
-        content: '';
-        background-color: white;
-      }
-
-      &::after {
-        position: absolute;
-        top: 3px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        display: block;
-        width: 33px;
-        height: 3px;
-        content: '';
-        background-color: white;
-      }
+    
     }
-
+    .middle {
+      position: absolute;
+      top: -10px;
+      //margin-top: 5px;
+      //margin-bottom: 5px;
+      display: block;
+      width: 33px;
+      height: 3px;
+      content: '';
+      background-color: white;
+    }
+    
+    .bottom {
+      position: absolute;
+      top: 0px;
+      //margin-top: 5px;
+     // margin-bottom: 5px;
+      display: block;
+      width: 33px;
+      height: 3px;
+      content: '';
+      background-color: white;
+    }
+   
     .burger-menu {
       position: absolute;
-      right: -16px;
+      right: -17px;
       top: -5px;
       height: 0px;
     }
   }
 }
 
+.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -14px;
+  left: -16px;
+}
+
+.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: -14px;
+  left: -16px;
+}
 .nav-btn {
   display: flex;
   justify-content: center;

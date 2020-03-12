@@ -1,8 +1,13 @@
 
+// * {
+//   border: 1px solid red;
+// }
 body {
   margin: 0;
   font-family: 'poppins', sans-serif;
   letter-spacing: .4px;
+  position: relative;
+  overflow: hidden;
 }
 a {
   display: inline-block;
@@ -16,7 +21,14 @@ li {
   height: 100%;
   display: flex;
 }
-////////////////////////////////////////////////
+#b-container {
+  overflow-x:hidden; 
+  overflow-y: scroll; 
+  height: 100vh; 
+  width:100vw;
+  position: relative;
+}
+///////////////////////////////////////////
 //Header base elements
 ///////////////////////////////////////////
 header button {
@@ -25,36 +37,25 @@ header button {
 }
 .heading {
   background-color: white;
+  margin-right: 17px;
 }
 .navbar {
   display: none;
   background-color: #333645;
   height: 99px;
 }
-////////////////////////////////////////////////////
-//Testing for the javascript on-scroll header
-////////////////////////////////////////////////////
-// #myHeader {
-//   z-index: 100;
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   transition: top 0.3s;
-// }
-// .main-pic {
-//   margin-top: 110px;
-// }
 
 ////////////////////////////////////////////////////
 //The caption overlay for the carousel's base elements
 ////////////////////////////////////////////////////
+
 figcaption {
   width: 100%;
   text-align: center;
-  padding-top: 235px;
+  padding-top: 270px;
   button:hover {
-    background-color: #e80a42;
-    border-color: #d4093c;
+    // background-color: #e80a42;
+    // border-color: #d4093c;
     cursor: pointer;
   }
 }

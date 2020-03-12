@@ -465,6 +465,8 @@ body {
   margin: 0;
   font-family: 'poppins', sans-serif;
   letter-spacing: .4px;
+  position: relative;
+  overflow: hidden;
 }
 
 a {
@@ -482,6 +484,14 @@ li {
   display: flex;
 }
 
+#b-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
 header button {
   text-decoration: none;
   color: white;
@@ -489,6 +499,7 @@ header button {
 
 .heading {
   background-color: white;
+  margin-right: 17px;
 }
 
 .navbar {
@@ -500,12 +511,10 @@ header button {
 figcaption {
   width: 100%;
   text-align: center;
-  padding-top: 235px;
+  padding-top: 270px;
 }
 
 figcaption button:hover {
-  background-color: #e80a42;
-  border-color: #d4093c;
   cursor: pointer;
 }
 
@@ -739,6 +748,139 @@ figcaption button:hover {
 
 .selection .menu-btn-li .burger:hover {
   background-color: white;
+}
+
+#myHeader {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+}
+
+.main-pic {
+  margin-top: 110px;
+}
+
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 350px;
+  height: 100%;
+  background: #333645;
+  overflow: auto;
+}
+
+.sidebar a {
+  height: 16px;
+  width: 310px;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.sb-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.sb-flex ul {
+  flex-direction: column;
+}
+
+.sb-flex ul li {
+  flex-direction: column;
+}
+
+.training, .our-company, .our-work, .our-knowledge {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.training:hover .highlight {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.our-company:hover .highlight {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.our-work:hover .highlight {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.our-knowledge:hover .highlight {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.menu a {
+  font-size: 0.875rem;
+  height: 20px;
+  padding: 15px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menu a::before {
+  content: "\00BB";
+  padding-right: 15px;
+}
+
+.menu li {
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+.sidebar-vis {
+  display: block;
+}
+
+.sb-class {
+  position: absolute;
+  right: 350px;
+  width: 100%;
+}
+
+.disable {
+  position: absolute;
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(54, 53, 53, 0.281);
+}
+
+.cookie {
+  position: fixed;
+  bottom: 0;
+  z-index: 100000;
+  height: 60px;
+  width: 100%;
+  background-color: #22242e;
+  color: #fff;
+}
+
+.cookie .h1 {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.btn-holder {
+  position: absolute;
+  top: 5px;
+  right: 100px;
+}
+
+.accept-btn,
+.decline-btn {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.cookie-invis {
+  display: none;
 }
 
 .first-section {
@@ -1408,6 +1550,7 @@ footer .sitemap {
 .navbar .nav-btn:hover .bar {
   display: flex;
   position: absolute;
+  z-index: 100;
   top: 99px;
   left: 0%;
   margin: auto;
@@ -1542,7 +1685,8 @@ footer .sitemap {
 
 .support-btn,
 .contact-btn,
-.menu-btn {
+.menu-btn,
+.cookie-btn {
   vertical-align: center;
   border: 1px solid transparent;
   padding: 5px 15px;
@@ -1610,11 +1754,9 @@ button:hover {
   background-color: white;
 }
 
-.menu-btn .burger-box .burger::before {
+.menu-btn .burger-box .middle {
   position: absolute;
-  top: 11px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  top: -10px;
   display: block;
   width: 33px;
   height: 3px;
@@ -1622,11 +1764,9 @@ button:hover {
   background-color: white;
 }
 
-.menu-btn .burger-box .burger::after {
+.menu-btn .burger-box .bottom {
   position: absolute;
-  top: 3px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  top: 0px;
   display: block;
   width: 33px;
   height: 3px;
@@ -1636,9 +1776,32 @@ button:hover {
 
 .menu-btn .burger-box .burger-menu {
   position: absolute;
-  right: -16px;
+  right: -17px;
   top: -5px;
   height: 0px;
+}
+
+.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -14px;
+  left: -16px;
+}
+
+.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: -14px;
+  left: -16px;
 }
 
 .nav-btn {
@@ -1702,7 +1865,7 @@ button:hover {
 }
 
 .fa-shield-alt {
-  color: #f62459;
+  color: #de093f;
 }
 
 .fa-arrow-right {
@@ -1726,30 +1889,29 @@ button:hover {
   object-fit: contain;
 }
 
-.main-pic {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home-lQs1.jpg") no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 709px;
+.carousel {
+  width: 100%;
+  height: 774px;
   color: white;
   line-height: 2.25rem;
-  margin-bottom: 45px;
+  text-decoration: none;
 }
 
-.main-pic h1 {
+.carousel h1 {
   margin-top: 0px;
   font-size: 48px;
   font-weight: normal;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
-.main-pic p {
+.carousel p {
   font-size: 20px;
+  text-decoration: none;
 }
 
-.main-pic button {
+.carousel button {
   margin-top: 25px;
-  background-color: #f62459;
   height: auto;
   border: 1px solid transparent;
   color: white;
@@ -1759,6 +1921,90 @@ button:hover {
   border-radius: 3px;
   font-family: 'poppins', sans-serif;
   letter-spacing: .4px;
+}
+
+.web-design {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home-3wAI.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.web-design button {
+  background-color: #926fb1;
+}
+
+.web-design figcaption button:hover {
+  background-color: #79539a;
+}
+
+.it-support {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home-57sJ.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.it-support button {
+  background-color: #4183d7;
+}
+
+.it-support figcaption button:hover {
+  background-color: #286abd;
+}
+
+.telecoms-services {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home-5yqm.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.telecoms-services button {
+  background-color: #d64541;
+}
+
+.telecoms-services figcaption button:hover {
+  background-color: #bc2c28;
+}
+
+.bespoke-software {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home-sqvx.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bespoke-software button {
+  background-color: #67809f;
+}
+
+.bespoke-software figcaption button:hover {
+  background-color: #526781;
+}
+
+.digital-marketing {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home-JQsO.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.digital-marketing button {
+  background-color: #2ecc71;
+}
+
+.digital-marketing figcaption button:hover {
+  background-color: #25a25a;
+}
+
+.cyber-security {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home-lQs1.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cyber-security button {
+  background-color: #f62459;
+}
+
+.cyber-security figcaption button:hover {
+  background-color: #de093f;
 }
 
 .img-container {
@@ -1998,7 +2244,7 @@ button:hover {
     max-width: 385px;
   }
   .second-section {
-    background-image: url(/Reflection/img/branded.png);
+    background-image: url(../img/branded.png);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: auto 100%;

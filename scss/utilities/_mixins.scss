@@ -17,6 +17,7 @@
     .bar {
         display: flex;
         position: absolute;
+        z-index: 100;
         top: 99px;
         left: 0%;
         margin: auto;

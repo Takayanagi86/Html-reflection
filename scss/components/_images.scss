@@ -8,29 +8,32 @@
 }
 
 //Properties for the main pic used instead of the carousel
-.main-pic {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/home-lQs1.jpg') no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 709px;
+.carousel {
+  width: 100%;
+  height: 774px;
   color: white;
   line-height: 2.25rem;
-  margin-bottom: 45px;
+  //margin-bottom: 45px;
+  text-decoration: none;
+
+  
 
   h1 {
     margin-top: 0px;
     font-size: 48px;
     font-weight: normal;
     text-transform: uppercase;
+    text-decoration: none;
   }
 
   p {
     font-size: 20px;
+    text-decoration: none;
   }
 
   button {
     margin-top: 25px;
-    background-color: $cs-colors;
+    
     height: auto;
     border: 1px solid transparent;
     color: white;
@@ -40,6 +43,73 @@
     border-radius: 3px;
     font-family: 'poppins', sans-serif;
     letter-spacing: .4px;
+  }
+}
+
+.web-design {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/home-3wAI.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  button{
+    background-color: $wd-block-colors;
+  }
+  figcaption button:hover {
+    background-color: $wd-colors;
+  }
+}
+.it-support {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/home-57sJ.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  button{
+    background-color: $it-block-colors;
+  }
+  figcaption button:hover {
+    background-color: $it-colors;
+  }
+}
+.telecoms-services {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/home-5yqm.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  button{
+    background-color: $ts-block-colors;
+  }
+  figcaption button:hover {
+    background-color: $ts-colors;
+  }
+}
+.bespoke-software {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/home-sqvx.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  button{
+    background-color: $bs-block-colors;
+  }
+  figcaption button:hover {
+    background-color: $bs-colors;
+  }
+}
+.digital-marketing {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/home-JQsO.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  button{
+    background-color: $dm-block-colors;
+  }
+  figcaption button:hover {
+    background-color: $dm-colors;
+  }
+}
+.cyber-security {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/home-lQs1.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  button{
+    background-color: $cs-block-colors;
+  }
+  figcaption button:hover {
+    background-color: $cs-colors;
   }
 }
 
